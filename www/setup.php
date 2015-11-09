@@ -34,7 +34,7 @@ function handleException($exception) {
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Title of the document</title>
+<title>Ошибка</title>
 </head>
 <body><?php
     echo "error Произошла ошибка. Перезагрузите страницу.";
