@@ -15,10 +15,6 @@ define("DB_NAME", "combodb");
 define("DB_PASS", "combopass");
 define("LIBRARY_PATH", "../library/");
 
-// Заменить на загрузку полей из базы
-define( "ADMIN_USERNAME", "admin" );
-define( "ADMIN_PASSWORD", "mypass" );
-
 // Основные папки движка.
 define("CLASS_PATH", LIBRARY_PATH . "classes");
 define("TEMPLATE_PATH", LIBRARY_PATH . "templates");
