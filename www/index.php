@@ -14,7 +14,6 @@ $action = $route->action;
 // Если пользователь не авторизован, выводим форму авторизации.
 if ($action != "login" && $action != "logout" && !User::isLoggedIn()) {
     login();
-    die('not authed');
     exit;
 }
 
