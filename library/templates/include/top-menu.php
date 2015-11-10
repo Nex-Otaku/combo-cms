@@ -38,6 +38,9 @@ if (!empty($menuList)):
     </div>
 -->
 <?php endif; ?>
+<!--
+STUB
 <div id="adminHeader">
     <p>Добро пожаловать, <b><?php echo htmlspecialchars(User::get()->username); ?></b>. <a href="<?= Route::getUrl('logout') ?>">Выход</a></p>
 </div>
+-->
