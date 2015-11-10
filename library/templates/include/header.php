@@ -13,6 +13,8 @@
         <script src="js/external/jquery/jquery-2.1.4.min.js"></script>
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script src="css/bootstrap/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+        
+        <link href="css/combo/common.css" rel="stylesheet">
     </head>
     <body>
         <?php
