@@ -19,6 +19,10 @@ define("LIBRARY_PATH", "../library/");
 define("CLASS_PATH", LIBRARY_PATH . "classes");
 define("TEMPLATE_PATH", LIBRARY_PATH . "templates");
 
+// Строковые константы.
+define("SITE_NAME", "Combo CMS");
+define("AUTHOR_NAME", "Nex Otaku");
+
 // Загружаем классы движка.
 require(CLASS_PATH . "/Article.php");
 require(CLASS_PATH . "/Db.php");

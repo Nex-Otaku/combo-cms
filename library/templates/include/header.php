@@ -15,16 +15,17 @@
         <script src="js/bootstrap/bootstrap-3.3.5/js/bootstrap.min.js"></script>
     </head>
     <body>
-        <div id="container">
+        <?php
+        if (User::isLoggedIn()) {
+            include TEMPLATE_PATH . "/include/top-menu.php";
+        }
+        ?>
+        <div class="container">
 
-            <a href="/">Combo CMS</a>
-
-            <?php
-            if (User::isLoggedIn()) {
-                include TEMPLATE_PATH . "/include/top-menu.php";
-            }
-            ?>
-
+            <div class="page-header">
+                <h1><?= htmlspecialchars($results['pageTitle']) ?></h1>
+            </div>
+            
             <?php if (Notification::hasError()) { ?>
                 <div class="errorMessage"><?= Notification::getError() ?></div>
             <?php } ?>
