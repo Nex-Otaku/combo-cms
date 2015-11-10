@@ -1,7 +1,5 @@
 <?php include TEMPLATE_PATH . "/include/header.php" ?>
 
-<h1>Список пользователей</h1>
-
 <ul id="headlines" class="archive">
 
     <?php if (!empty($results['users'])): ?>

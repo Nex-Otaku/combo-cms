@@ -181,7 +181,7 @@ function archive() {
     $data = Article::getList();
     $results['articles'] = $data['results'];
     $results['totalRows'] = $data['totalRows'];
-    $results['pageTitle'] = "Страницы";
+    $results['pageTitle'] = "Список статей";
 
     require( TEMPLATE_PATH . "/archive.php" );
 }
@@ -287,7 +287,7 @@ function viewUser() {
 function users() {
     $results = array();
     $results['users'] = User::getList();
-    $results['pageTitle'] = "Пользователи";
+    $results['pageTitle'] = "Список пользователей";
 
     require( TEMPLATE_PATH . "/users.php" );
 }

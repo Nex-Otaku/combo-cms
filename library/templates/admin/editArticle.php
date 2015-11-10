@@ -1,7 +1,5 @@
 <?php include TEMPLATE_PATH . "/include/header.php" ?>
  
-      <h1><?php echo $results['pageTitle']?></h1>
- 
       <form action="<?= Route::getUrl($results['formAction'], $results['formActionParams']) ?>" method="post">
         <input type="hidden" name="articleId" value="<?php echo $results['article']->id ?>"/>
  

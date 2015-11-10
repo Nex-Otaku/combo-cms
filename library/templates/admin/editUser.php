@@ -1,6 +1,4 @@
 <?php include TEMPLATE_PATH . "/include/header.php" ?>
- 
-      <h1><?php echo $results['pageTitle']?></h1>
       
       <?php 
       $user = $results['user']; 
