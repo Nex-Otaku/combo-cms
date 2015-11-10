@@ -11,32 +11,21 @@ if (!empty($menuList)):
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#"><?= SITE_NAME ?></a>
+                <a class="navbar-brand" href="/"><?= SITE_NAME ?></a>
             </div>
             <div id="navbar" class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                <?php foreach ($menuList as $menu): ?>
+                    <?php if ($menu->isSelected()): ?>
+                        <li class="active"><a href="<?= $menu->getUrl(); ?>"><?= $menu->label; ?></a></li>
+                    <?php else: ?>
+                        <li><a href="<?= $menu->getUrl(); ?>"><?= $menu->label; ?></a></li>
+                    <?php endif; ?>
+                <?php endforeach; ?>
                 </ul>
             </div><!--/.nav-collapse -->
         </div>
     </nav>
-<!--
-    <div id="top-menu">
-        <ul>
-            <?php foreach ($menuList as $menu): ?>
-                <li>
-                    <?php if ($menu->isSelected()): ?>
-                        <b>[&nbsp;<?= $menu->label; ?>&nbsp;]</b>
-                    <?php else: ?>
-                        <a href="<?= $menu->getUrl(); ?>"><?= $menu->label; ?></a>
-                    <?php endif; ?>
-                </li>
-            <?php endforeach; ?>
-        </ul>
-    </div>
--->
 <?php endif; ?>
 <!--
 STUB
