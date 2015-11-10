@@ -12,7 +12,7 @@
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="js/external/jquery/jquery-2.1.4.min.js"></script>
         <!-- Include all compiled plugins (below), or include individual files as needed -->
-        <script src="js/bootstrap/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+        <script src="css/bootstrap/bootstrap-3.3.5/js/bootstrap.min.js"></script>
     </head>
     <body>
         <?php
