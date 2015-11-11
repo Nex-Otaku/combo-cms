@@ -74,12 +74,12 @@ function login() {
 
             // Авторизация не прошла: показываем сообщение об ошибке
             Notification::setError('wrongPassword');
-            require( TEMPLATE_PATH . "/admin/loginForm.php" );
+            require( TEMPLATE_PATH . "/loginForm.php" );
         }
     } else {
 
         // Пользователь не отправил данные: показываем форму авторизации.
-        require( TEMPLATE_PATH . "/admin/loginForm.php" );
+        require( TEMPLATE_PATH . "/loginForm.php" );
     }
 }
 
@@ -112,7 +112,7 @@ function newArticle() {
 
         // Пользователь ещё не отправил форму. Показываем форму.
         $results['article'] = new Article();
-        require( TEMPLATE_PATH . "/admin/editArticle.php" );
+        require( TEMPLATE_PATH . "/editArticle.php" );
     }
 }
 
@@ -147,7 +147,7 @@ function editArticle() {
 
         // Пользователь ещё не отправил форму. Показываем форму.
         $results['article'] = Article::getById((int) Route::getCurrentRoute()->values['articleId']);
-        require( TEMPLATE_PATH . "/admin/editArticle.php" );
+        require( TEMPLATE_PATH . "/editArticle.php" );
     }
 }
 
@@ -204,7 +204,7 @@ function newUser() {
             // Пароль обязателен.
             Notification::setError('emptyPassword');
             $results['user'] = $user;
-            require( TEMPLATE_PATH . "/admin/editUser.php" );
+            require( TEMPLATE_PATH . "/editUser.php" );
             return;
         }
         
@@ -219,7 +219,7 @@ function newUser() {
 
         // Пользователь ещё не отправил форму. Показываем форму.
         $results['user'] = new User();
-        require( TEMPLATE_PATH . "/admin/editUser.php" );
+        require( TEMPLATE_PATH . "/editUser.php" );
     }
 }
 
@@ -255,7 +255,7 @@ function editUser() {
 
         // Пользователь ещё не отправил форму. Показываем форму.
         $results['user'] = User::getById((int) Route::getCurrentRoute()->values['userId']);
-        require( TEMPLATE_PATH . "/admin/editUser.php" );
+        require( TEMPLATE_PATH . "/editUser.php" );
     }
 }
 
