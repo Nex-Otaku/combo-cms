@@ -15,21 +15,19 @@ if (!empty($menuList)):
             </div>
             <div id="navbar" class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
-                <?php foreach ($menuList as $menu): ?>
-                    <?php if ($menu->isSelected()): ?>
-                        <li class="active"><a href="<?= $menu->getUrl(); ?>"><?= $menu->label; ?></a></li>
-                    <?php else: ?>
-                        <li><a href="<?= $menu->getUrl(); ?>"><?= $menu->label; ?></a></li>
-                    <?php endif; ?>
-                <?php endforeach; ?>
+                    <?php foreach ($menuList as $menu): ?>
+                        <?php if ($menu->isSelected()): ?>
+                            <li class="active"><a href="<?= $menu->getUrl(); ?>"><?= $menu->label; ?></a></li>
+                        <?php else: ?>
+                            <li><a href="<?= $menu->getUrl(); ?>"><?= $menu->label; ?></a></li>
+                        <?php endif; ?>
+                    <?php endforeach; ?>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <p class="navbar-text">Добро пожаловать, <b><?php echo htmlspecialchars(User::get()->username); ?></b></p>
+                    <li><a href="<?= Route::getUrl('logout') ?>">Выход</a></li>
                 </ul>
             </div><!--/.nav-collapse -->
         </div>
     </nav>
 <?php endif; ?>
-<!--
-STUB
-<div id="adminHeader">
-    <p>Добро пожаловать, <b><?php echo htmlspecialchars(User::get()->username); ?></b>. <a href="<?= Route::getUrl('logout') ?>">Выход</a></p>
-</div>
--->
