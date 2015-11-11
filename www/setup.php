@@ -27,7 +27,7 @@ define("AUTHOR_NAME", "Nex Otaku");
 define("MIN_PHP_VERSION", "5.3.6");
 
 // Проверяем версию PHP.
-if (version_compare(PHP_VERSION, MIN_PHP_VERSION) >= 0) {
+if (version_compare(PHP_VERSION, MIN_PHP_VERSION, '<')) {
     die('Используемая версия PHP: ' . PHP_VERSION . ". Требуемая версия PHP: " . MIN_PHP_VERSION);
 }
 
