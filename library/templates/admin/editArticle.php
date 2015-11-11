@@ -1,5 +1,6 @@
 <?php include TEMPLATE_PATH . "/include/header.php" ?>
 
+<script src="/js/external/ckeditor-4.5.4-basic/ckeditor.js"></script>
 <form action="<?= Route::getUrl($results['formAction'], $results['formActionParams']) ?>" method="post">
     <input type="hidden" name="articleId" value="<?php echo $results['article']->id ?>"/>
 
@@ -32,9 +33,12 @@
             </div>
         </div>
     </div>
-
+    <script>
+        // Replace the <textarea id="content"> with a CKEditor
+        // instance, using default configuration.
+        CKEDITOR.replace('content');
+    </script>
 </form>
-
 
 <?php
 include TEMPLATE_PATH . "/include/footer.php";
