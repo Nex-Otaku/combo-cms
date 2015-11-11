@@ -4,19 +4,14 @@
 <form action="<?= Route::getUrl($results['formAction'], $results['formActionParams']) ?>" method="post">
     <input type="hidden" name="articleId" value="<?php echo $results['article']->id ?>"/>
 
-    <ul>
-
-        <li>
-            <label for="title">Заголовок</label>
-            <input type="text" name="title" id="title" placeholder="Название статьи" required autofocus maxlength="255" value="<?php echo $results['article']->getTitle() ?>" />
-        </li>
-
-        <li>
-            <label for="content">Основной текст</label>
-            <textarea name="content" id="content" placeholder="Содержимое статьи" required maxlength="100000" style="height: 30em;"><?php echo htmlspecialchars($results['article']->content) ?></textarea>
-        </li>
-
-    </ul>
+    <div class="form-group">
+        <label for="title">Заголовок</label>
+        <input class="form-control" type="text" name="title" id="title" placeholder="Название статьи" required autofocus maxlength="255" value="<?php echo $results['article']->getTitle() ?>" />
+    </div>
+    <div class="form-group">
+        <label for="content">Основной текст</label>
+        <textarea class="form-control" name="content" id="content" placeholder="Содержимое статьи" required maxlength="100000" style="height: 30em;"><?php echo htmlspecialchars($results['article']->content) ?></textarea>
+    </div>
 
     <div class="row">
         <div class="col-md-3">
