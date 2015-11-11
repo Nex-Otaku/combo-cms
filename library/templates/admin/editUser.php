@@ -11,22 +11,16 @@ $canDelete = !$newUser && !$editCurrentUser;
 <form action="<?= Route::getUrl($results['formAction'], $results['formActionParams']) ?>" method="post">
     <input type="hidden" name="userId" value="<?php echo $user->id ?>"/>
 
-    <ul>
-
-        <li>
-            <label for="username">Логин</label>
-            <input type="text" name="username" id="username" placeholder="Имя пользователя" required autofocus maxlength="255" value="<?php echo htmlspecialchars($user->username) ?>" />
-        </li>
-
-        <?php if ($canEditPass): ?>
-            <li>
-                <label for="password">Пароль</label>
-                <input type="text" name="password" id="password" placeholder="Пароль" maxlength="255" value="" />
-            </li>
-        <?php endif; ?>
-
-    </ul>
-
+    <div class="form-group">
+        <label for="username">Логин</label>
+        <input class="form-control" type="text" name="username" id="username" placeholder="Имя пользователя" required autofocus maxlength="255" value="<?php echo htmlspecialchars($user->username) ?>" />
+    </div>
+    <?php if ($canEditPass): ?>
+        <div class="form-group">
+            <label for="password">Пароль</label>
+            <input class="form-control" type="text" name="password" id="password" placeholder="Пароль" maxlength="255" value="" />
+        </div>
+    <?php endif; ?>
     <div class="row">
         <div class="col-md-3">
             <div>
