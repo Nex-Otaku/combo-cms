@@ -142,7 +142,7 @@ class Article {
         $st->execute();
     }
     
-    public function getTitle($sanitize = true) {
-        return $sanitize ? preg_replace("/[^\.\,\-\_\'\"\@\?\!\:\$ a-zA-Z0-9()]/", "", $this->title) : $this->title;
+    public function getTitle() {
+        return htmlspecialchars($this->title);
     }
 }

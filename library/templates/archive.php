@@ -7,7 +7,7 @@
         <li>
             <h2>
                 
-                <a href="<?= Route::getUrl('viewArticle', array('articleId' => $article->id))?>"><?php echo htmlspecialchars($article->getTitle()) ?></a>
+                <a href="<?= Route::getUrl('viewArticle', array('articleId' => $article->id))?>"><?php echo $article->getTitle() ?></a>
             </h2>
             <a href="<?= Route::getUrl('editArticle', array('articleId' => $article->id))?>">Редактировать</a>
         </li>

@@ -8,7 +8,7 @@
 
         <li>
             <label for="title">Заголовок</label>
-            <input type="text" name="title" id="title" placeholder="Название статьи" required autofocus maxlength="255" value="<?php echo htmlspecialchars($results['article']->getTitle(false)) ?>" />
+            <input type="text" name="title" id="title" placeholder="Название статьи" required autofocus maxlength="255" value="<?php echo $results['article']->getTitle() ?>" />
         </li>
 
         <li>
